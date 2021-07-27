@@ -1,0 +1,18 @@
+{
+  "name": "service-worker-demo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Mark Vainomaa <mikroskeem@mikroskeem.eu>",
+  "license": "MIT",
+  "devDependencies": {
+    "esbuild": "^0.12.16"
+  },
+  "dependencies": {
+    "near-api-js": "^0.42.0",
+    "near-seed-phrase": "^0.2.0",
+    "workerio": "^0.3.0"
+  },
+  "scripts": {
+    "build": "esbuild sw.js --platform=browser --define:window=self --bundle --outdir=dist --external:crypto --external:events --external:stream"
+  }
+}
